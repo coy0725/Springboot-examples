@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class NonfairBargeDemo {
 
     private static ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock(
-            true);
+            false);
 
     private static ReentrantReadWriteLock.ReadLock readLock = reentrantReadWriteLock.readLock();
     private static ReentrantReadWriteLock.WriteLock writeLock = reentrantReadWriteLock.writeLock();
@@ -56,7 +56,7 @@ public class NonfairBargeDemo {
             public void run() {
                 Thread thread[] = new Thread[1000];
                 for (int i = 0; i < 1000; i++) {
-                    thread[i] = new Thread(() -> read(), "子线程创建的Thread" + i);
+                    thread[i] = new Thread(() -> write(), "子线程创建的Thread" + i);
                 }
                 for (int i = 0; i < 1000; i++) {
                     thread[i].start();

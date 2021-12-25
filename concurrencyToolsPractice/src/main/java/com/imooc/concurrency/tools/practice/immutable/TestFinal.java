@@ -1,4 +1,4 @@
-package immutable;
+package com.imooc.concurrency.tools.practice.immutable;
 
 /**
  * 描述：     测试final能否被修改

@@ -23,7 +23,7 @@ public class LockInterruptibly implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        thread0.interrupt();
+        thread1.interrupt();
     }
 
     @Override

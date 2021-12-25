@@ -53,14 +53,14 @@ public class LockDemo {
         public void output(String name) {
 
             int len = name.length();
-            //lock.lock();
+            lock.lock();
             try {
                 for (int i = 0; i < len; i++) {
                     System.out.print(name.charAt(i));
                 }
                 System.out.println("");
             } finally {
-                //lock.unlock();
+                lock.unlock();
             }
         }
     }

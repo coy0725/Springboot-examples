@@ -41,6 +41,9 @@ public class CinemaReadWrite {
         new Thread(()->read(),"Thread1").start();
         new Thread(()->read(),"Thread2").start();
         new Thread(()->write(),"Thread3").start();
+        new Thread(()->read(),"Thread6").start();
         new Thread(()->write(),"Thread4").start();
+        new Thread(()->read(),"Thread7").start();
+        new Thread(()->read(),"Thread8").start();
     }
 }

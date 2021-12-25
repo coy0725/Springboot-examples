@@ -1,4 +1,4 @@
-package immutable;
+package com.imooc.concurrency.tools.practice.immutable;
 
 /**
  * 描述：     final的方法

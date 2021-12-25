@@ -3,7 +3,7 @@ package lock.reentrantlock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 描述：     TODO
+ * 描述：     演示可重入性质
  */
 public class GetHoldCount {
     private  static ReentrantLock lock =  new ReentrantLock();

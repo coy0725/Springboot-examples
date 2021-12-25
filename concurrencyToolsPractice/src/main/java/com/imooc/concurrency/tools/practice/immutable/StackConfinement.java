@@ -1,4 +1,4 @@
-package immutable;
+package com.imooc.concurrency.tools.practice.immutable;
 
 /**
  * 描述：     演示栈封闭的两种情况，基本变量和对象 先演示线程争抢带来错误结果，然后把变量放到方法内，情况就变了

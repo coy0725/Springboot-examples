@@ -1,4 +1,4 @@
-package lock.readwrite;
+package com.imooc.concurrency.tools.practice.lock.readwrite;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -39,20 +39,28 @@ public class Upgrading {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            readLock.unlock();
+
             System.out.println(Thread.currentThread().getName() + "释放写锁");
             writeLock.unlock();
+        }
+
+
+        try {
+            System.out.println("开始读操作");
+        }finally {
+            System.out.println(Thread.currentThread().getName() + "释放读锁");
+            readLock.unlock();
         }
     }
 
     public static void main(String[] args) throws InterruptedException {
 //        System.out.println("先演示降级是可以的");
-//        Thread thread1 = new Thread(() -> writeDowngrading(), "Thread1");
-//        thread1.start();
-//        thread1.join();
+        Thread thread1 = new Thread(() -> writeDowngrading(), "Thread1");
+        thread1.start();
+        thread1.join();
 //        System.out.println("------------------");
 //        System.out.println("演示升级是不行的");
-        Thread thread2 = new Thread(() -> readUpgrading(), "Thread2");
-        thread2.start();
+//        Thread thread2 = new Thread(() -> readUpgrading(), "Thread2");
+//        thread2.start();
     }
 }

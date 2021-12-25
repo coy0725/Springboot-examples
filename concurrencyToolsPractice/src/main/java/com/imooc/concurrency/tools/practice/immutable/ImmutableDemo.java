@@ -1,4 +1,4 @@
-package immutable;
+package com.imooc.concurrency.tools.practice.immutable;
 
 import java.util.HashSet;
 import java.util.Set;
