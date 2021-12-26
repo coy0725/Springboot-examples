@@ -1,4 +1,4 @@
-package com.imooc.net.programming.practice.socket;
+package com.imooc.net.programming.bio.sockettutorial;
 
 import java.io.*;
 import java.net.ServerSocket;
