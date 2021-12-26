@@ -12,12 +12,12 @@ public class Server {
         ServerSocket serverSocket = null;
 
         try {
-            // 绑定监听端口
+            //step1、 绑定监听端口
             serverSocket = new ServerSocket(DEFAULT_PORT);
             System.out.println("启动服务器，监听端口" + DEFAULT_PORT);
 
             while (true) {
-                // 等待客户端连接
+                //step2 等待客户端连接
                 Socket socket = serverSocket.accept();
                 System.out.println("客户端[" + socket.getPort() + "]已连接");
                 BufferedReader reader = new BufferedReader(
@@ -27,7 +27,8 @@ public class Server {
                         new OutputStreamWriter(socket.getOutputStream())
                 );
 
-                String msg = null;
+                //step3 与客户端进行数据传输
+                String msg;
                 while ((msg = reader.readLine()) != null) {
                     // 读取客户端发送的消息
                     System.out.println("客户端[" + socket.getPort() + "]: " + msg);

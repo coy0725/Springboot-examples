@@ -9,7 +9,7 @@ public class Client {
         final String QUIT = "quit";
         final String DEFAULT_SERVER_HOST = "127.0.0.1";
         final int DEFAULT_SERVER_PORT = 8888;
-        Socket socket = null;
+        Socket socket;
         BufferedWriter writer = null;
 
         try {
