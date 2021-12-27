@@ -6,6 +6,7 @@ import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -22,7 +23,7 @@ public class ChatClient {
     private ByteBuffer rBuffer = ByteBuffer.allocate(BUFFER);
     private ByteBuffer wBuffer = ByteBuffer.allocate(BUFFER);
     private Selector selector;
-    private Charset charset = Charset.forName("UTF-8");
+    private Charset charset = StandardCharsets.UTF_8;
 
     public ChatClient() {
         this(DEFAULT_SERVER_HOST, DEFAULT_SERVER_PORT);

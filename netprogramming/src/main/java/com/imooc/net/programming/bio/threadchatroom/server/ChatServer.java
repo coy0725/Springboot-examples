@@ -1,4 +1,4 @@
-package com.imooc.net.programming.bio.thradchatroom.server;
+package com.imooc.net.programming.bio.threadchatroom.server;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

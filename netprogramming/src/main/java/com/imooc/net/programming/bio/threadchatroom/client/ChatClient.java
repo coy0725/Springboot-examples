@@ -1,4 +1,4 @@
-package com.imooc.net.programming.bio.thradchatroom.client;
+package com.imooc.net.programming.bio.threadchatroom.client;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
